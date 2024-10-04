@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #505033;  /* Example primary color */
+    --secondary-color: #264969; /* Example secondary color */
+    --background-color: #f8f9fa; /* Light background */
+    --text-color: #343a40;      /* Dark text color */
+    --link-color: #007bff;      /* Link color */
+    --link-hover-color: #0056b3; /* Link hover color */
+    --article-bg-color: rgba(255, 255, 255, 0.8); /* Light background with opacity for article */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 1200px; /* Limit page width */
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Add padding */
+    font-family: Arial, sans-serif; /* Font family */
+}
+
+h1, h2, h3 {
+    color: var(--primary-color); /* Headings color */
+}
+
+p {
+    color: var(--text-color); /* Paragraph color */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: var(--link-hover-color); /* Change color on hover */
+}
+
+.hero {
+    position: relative; /* Position context for children */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.hero img {
+    display: block; /* Block image */
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.hero h1 {
+    position: absolute; /* Absolute positioning */
+    top: 20px; /* Positioning from top */
+    left: 20px; /* Positioning from left */
+    color: var(--primary-color); /* Heading color */
+    z-index: 10; /* Above other elements */
+}
+
+.hero article {
+    position: absolute; /* Absolute positioning */
+    bottom: 20px; /* Position from bottom */
+    left: 20px; /* Position from left */
+    background-color: var(--article-bg-color); /* Background color */
+    padding: 15px; /* Padding */
+    border-radius: 5px; /* Optional rounded corners */
+    z-index: 10; /* Above other elements */
+}
+
+.hero article p {
+    float: left; /* Float paragraph */
+    margin-right: 15px; /* Space to the right */
+}
+
+.hero article img {
+    float: right; /* Float image */
+    width: 100px; /* Width for image */
+    height: auto; /* Maintain aspect ratio */
+}
